@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Korolev
-nav_order: 2
+title: Thales
+nav_order: 4
 has_children: true
 ---
 Bhai waah
