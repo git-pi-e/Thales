@@ -5,7 +5,25 @@ layout: table_wrappers
 <!DOCTYPE html>
 
 <html lang="{{ site.lang | default: 'en-US' }}">
-{% include head.html %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  {% unless site.plugins contains "jekyll-seo-tag" %}
+  <title>{{ page.title }} - {{ site.title }}</title>
+  {% if page.description %}
+  <meta name="Description" content="{{ page.description }}">
+  {% endif %}
+  {% endunless %}
+  <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+  {% if site.search_enabled %}
+  <script type="text/javascript" src="{{ '/assets/js/lunr.min.js' | relative_url }}"></script>
+  {% endif %}
+  <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+</head>
 
 <body>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -58,7 +76,13 @@ layout: table_wrappers
 
   <div class="side-bar">
     <div class="site-header">
-      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
+      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">
+        {% if site.logo %}
+        <div class="site-logo"></div>
+        {% else %}
+        {{ site.title }}
+        {% endif %}
+      </a>
       <a href="#" id="menu-button" class="site-button">
         <svg viewBox="0 0 24 24" class="icon">
           <use xlink:href="#svg-menu"></use>
@@ -102,7 +126,6 @@ layout: table_wrappers
         <div id="search-results" class="search-results"></div>
       </div>
       {% endif %}
-      {% include header_custom.html %}
       {% if site.aux_links %}
       <nav aria-label="Auxiliary" class="aux-nav">
         <ul class="aux-nav-list">
@@ -151,7 +174,7 @@ layout: table_wrappers
       {% endunless %}
       <div id="main-content" class="main-content" role="main">
         {% if site.heading_anchors != false %}
-        {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\"
+        {% include anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\"
           aria-hidden=\"true\">
           <use xlink:href=\"#svg-link\"></use>
         </svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
@@ -172,17 +195,14 @@ layout: table_wrappers
           {% endfor %}
         </ul>
         {% endif %}
-
-        {% capture footer_custom %}
-        {%- include footer_custom.html -%}
-        {% endcapture %}
-
         <hr>
         <footer>
           {% if site.back_to_top %}
           <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
           {% endif %}
-          {{ footer_custom }}
+          {%- if site.footer_content -%}
+          <p class="text-small text-grey-dk-100 mb-0">{{ site.footer_content }}</p>
+          {%- endif -%}
         </footer>
 
       </div>
