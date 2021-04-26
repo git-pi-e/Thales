@@ -34,7 +34,7 @@ parent: Korolev
 
 | Classname  | What it does                  |
 |:-----------------|:------------------------------|
-| `.display`   | `display: block @important`        |
+| `.display`   | `display: block !important`        |
 | `.flex`   | `display: flex`        |
 | `.flex-col`   | .flex + `flex-direction: column`        |
 | `.f-wrap`   | .flex + `flex-wrap: wrap`        |
@@ -86,9 +86,13 @@ parent: Korolev
 
 `.f-wtX` where X is the weight/100. <br/>
 
+<span style="font-weight:100">
 So `f-wt1` is `font-weight: 100` <br/>
+</span>
 
+<span style="font-weight:700">
 To `f-wt7` is `font-weight: 700`
+</span>
 
 # Colours
 
@@ -114,3 +118,44 @@ To `f-wt7` is `font-weight: 700`
 | `b5e-83c`   |   <span class="d-inline-block p-2 v-align-middle" style="background:#b5e;" /> <span class="d-inline-block p-2 v-align-middle" style="background:#83c;" /> `background: linear-gradient(to top, #b5e, #83c)`|
 | `66e-37f`   |   <span class="d-inline-block p-2 v-align-middle" style="background:#66e;" /> <span class="d-inline-block p-2 v-align-middle" style="background:#37f;" /> `background: linear-gradient(to top, #66e, #37f)`|
 | `69e-8ae`   |   <span class="d-inline-block p-2 v-align-middle" style="background:#69e;" /> <span class="d-inline-block p-2 v-align-middle" style="background:#8ae;" /> `background: linear-gradient(to top, #69e, #8ae)`|
+
+# Elements
+
+## Width
+
+| Classname  | What it does    |Defaults              |
+|:-----------------|:---|:------------------------------|
+| `.w-50`   | `width: 50%` ||
+| `.w-66`   | `width: 66.66%` ||
+| `.w-100`   | `width: 100%` ||
+| `.w-gen`   | `width: calc(var(--base) - var(--offset))` | `--base:100%, --offset:0`|
+
+## Height
+
+| Classname  | What it does |
+|:---|:---|
+| `.h-a`   | `height: auto` |
+| `.h-100`   | `height: 100%` |
+
+# HTML Elements
+
+## Wildcard / All
+
+### Size
+
+| Attribute 'size'  | Width, Height |
+|:---|:---|
+| `max`   | `400px` |
+
+## Images
+
+### Size
+
+| Attribute 'size'  | Width, Height |
+|:---|:---|
+| `min`   | `22px` |
+| `ic`   | `25px` |
+| `ic-md`   | `66px` |
+| `ic-lg`   | `100px` |
+| `md`   | `150px` |
+| `md-lg`   | `175px` |
