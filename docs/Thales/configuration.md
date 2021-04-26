@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 # Configuration
-{: .no_toc }
+
 
 
 Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's _config.yml file.
@@ -63,18 +63,6 @@ search:
   button: false
 ```
 
-## Aux links
-
-```yaml
-# Aux links for the upper right navigation
-aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
-
-# Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
-```
-
 ## Heading anchor links
 
 ```yaml
@@ -108,7 +96,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 </script>
 
 # Customization
-{: .no_toc }
+
 
 ## Color schemes
 {: .d-inline-block }
@@ -121,7 +109,7 @@ Just the Docs supports two color schemes: light (default), and dark.
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
 
 #### Example
-{: .no_toc }
+
 
 ```yaml
 # Color scheme supports "light" (default) and "dark"
@@ -156,7 +144,7 @@ Available variables are listed in the [_variables.scss](https://github.com/pmars
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
 #### Example
-{: .no_toc }
+
 
 ```scss
 $link-color: $blue-000;
@@ -199,7 +187,7 @@ This will allow for all overrides to be kept in a single file, and for any upstr
 For example, if you'd like to add your own styles for printing a page, you could add the following styles.
 
 #### Example
-{: .no_toc }
+
 
 ```scss
 // Print-only styles.

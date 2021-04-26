@@ -2,7 +2,7 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "Thales is the SEDS Celestia Documentation system. Containing docs for Korolev, Edu, Thales & Blog"
 permalink: /
 ---
 
@@ -11,15 +11,39 @@ permalink: /
 This website is a guide to using Celestia's Web Platforms for development. It includes documentation for Korolev, Wordpress, Edu & Thales
 {: .fs-6 .fw-300 }
 
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/plutoniumm/Thales){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
 ## Getting started
 
-### Dependencies
+### Basic Principles
 
-Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special plugins and can run on GitHub Pages' standard Jekyll compiler. The [Jekyll SEO Tag plugin](https://github.com/jekyll/jekyll-seo-tag) is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit the [Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
+**Speed** is the first of all priorities while writing code. Try to not ship code which does not help the user. For example, the user should not have to download React/Vue just to get some basics working after which the website finally builds or don't add Javascript for tasks which can be done with just HTML or CSS. With that said, if they add significant irreplaceable value, go all in.
+
+> *The most optimum code is that which never runs*
+
+**Quality** closely follows speed, have people test out and give brutal feedback for features and components. If more that 95% people don't like it. Do better. Make it again.
+
+**Representation** If it is not fitting in place. Get rid of it. Find a better place for it, or a better feature for the place.
+
+We use the stacks for each website
+- Korolev: `Svelte (HTML, SCSS, JS)`
+- Edu: `SvelteKit (HTML, SCSS, JS), Docker`
+- Thales: `Jekyll (HTML + Markdown, SCSS, JS, Ruby)`
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Quick start: Use as a GitHub Pages remote theme
 
@@ -56,40 +80,3 @@ $ jekyll serve
 $ bundle exec jekyll serve
 ```
 4. Point your web browser to [http://localhost:4000](http://localhost:4000)
-
-If you're hosting your site on GitHub Pages, [set up GitHub Pages and Jekyll locally](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll) so that you can more easily work in your development environment.
-
-### Configure Just the Docs
-
-- [See configuration options]({{ site.baseurl }}{% link docs/Thales/configuration.md %})
-
----
-
-## About the project
-
-Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](http://patrickmarsceill.com).
-
-### License
-
-Just the Docs is distributed by an [MIT license](https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt).
-
-### Contributing
-
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/pmarsceill/just-the-docs#contributing).
-
-#### Thank you to the contributors of Just the Docs!
-
-<ul class="list-style-none">
-{% for contributor in site.github.contributors %}
-  <li class="d-inline-block mr-1">
-     <a href="{{ contributor.html_url }}"><img src="{{ contributor.avatar_url }}" width="32" height="32" alt="{{ contributor.login }}"/></a>
-  </li>
-{% endfor %}
-</ul>
-
-### Code of Conduct
-
-Just the Docs is committed to fostering a welcoming community.
-
-[View our Code of Conduct](https://github.com/pmarsceill/just-the-docs/tree/master/CODE_OF_CONDUCT.md) on our GitHub repository.

@@ -23,11 +23,8 @@
 
   {%- assign string_ordered_groups = string_ordered_pages
   | group_by_exp:"item", "item.nav_order | default: item.title | append:''" -%}
-  {%- if site.nav_sort == 'case_insensitive' -%}
+
   {%- assign sorted_string_ordered_groups = string_ordered_groups | sort_natural:"name" -%}
-  {%- else -%}
-  {%- assign sorted_string_ordered_groups = string_ordered_groups | sort:"name" -%}
-  {%- endif -%}
   {%- assign sorted_string_ordered_pages = "" | split:"X" -%}
   {%- for group in sorted_string_ordered_groups -%}
   {%- assign sorted_string_ordered_pages = sorted_string_ordered_pages | concat: group.items -%}

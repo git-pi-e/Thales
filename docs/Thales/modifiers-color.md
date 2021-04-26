@@ -18,7 +18,7 @@ Just the Docs spacing works in conjunction with a variety of modifiers that allo
 | `xl`      | 1400px (87.5rem) and up              |
 
 # Color Utilities
-{: .no_toc }
+
 
 All the colors used in Just the Docs have been systematized into a series of variables that have been extended to both font color and background color utility classes.
 

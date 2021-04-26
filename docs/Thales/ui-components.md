@@ -18,7 +18,7 @@ To make it as easy as possible to write documentation in plain Markdown, most UI
 
 ---
 # Buttons
-{: .no_toc }
+
 
 
 ## Basic button styles
@@ -101,7 +101,7 @@ Use the [margin utility classes]({{ site.baseurl }}{% link docs/Thales/layout-ty
 [Button ](http://example.com/){: .btn .btn-blue }
 ```
 # Code
-{: .no_toc }
+
 
 ## Inline code
 
@@ -111,7 +111,7 @@ Code can be rendered inline by wrapping it in single back ticks.
 Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ## Heading with `<inline code snippet>` in it.
-{: .no_toc }
+
 </div>
 ```markdown
 Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -216,7 +216,7 @@ Deprecated
 {: .label .label-red }
 ```
 # Lists
-{: .no_toc }
+
 
 Most lists can be rendered with pure Markdown.
 
@@ -301,7 +301,7 @@ Definition lists require HTML syntax and aren't supported with the GitHub Flavor
 ```
 
 # Typography
-{: .no_toc }
+
 
 ## Font stack
 
