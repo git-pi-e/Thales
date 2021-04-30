@@ -16,6 +16,25 @@ has_children: true
 
 ---
 
+### Structure
+
+```
+|-- root
+|   |-- docs (Public)
+|   |   |-- assets - Images and icons
+|   |   |-- build - Compiled JS & CSS
+|   |   |-- css - Stores Atomic & Global SCSS
+|   |   `-- Galileo - /Galileo
+|   `-- src
+|       |-- data - All JSON static data
+|       |-- pages - All Pages/Tabs
+|       |-- shared - Components shared in multiple pages
+|       `-- micro, nano - Components to large to be in pages
+|-- package.json
+|-- rollup.config
+`-- lic, readme
+```
+
 ### Starting Up
 
 After cloning the repo. In a terminal in the repo.
