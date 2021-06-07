@@ -1,19 +1,8 @@
 ---
 layout: default
-title: Best Practices
+title: Javascript
 parent: General
 nav_order: 2
----
-
-# Best Practices
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
 ---
 
 # Nomenclature
@@ -111,7 +100,31 @@ const sub = (a,b) => {
     return a-b
 }
 ```
-# Write Comments
-```js
-// PLEASE
+
+## Avoid inline functions
+Inline functions trigger a full component rerender even if it is not needed, that is just wasteful even if props don't change. It also increases the app footprint by about 40% (For that function).
+
+```jsx
+import React, { Component } from 'react';
+
+class BadParent extends Component{
+    render() {
+        return (
+            <Child
+                onClick={()=> console.log('This is bad practice')}
+            />
+        )
+    }
+}
+
+class GoodParent extends Component{
+    function doWork() {
+        console.log('This is Good practice')
+    }
+    render() {
+        return (
+            <Child onClick={doWork} />
+        )
+    }
+}
 ```

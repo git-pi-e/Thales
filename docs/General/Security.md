@@ -5,17 +5,6 @@ parent: General
 nav_order: 1
 ---
 
-# Security
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
-
 # External Files
 
 - All external files for JS must have an integrity check and a cross origin anonymous. This will prevent data compromised on the fly from being used.

@@ -5,17 +5,6 @@ nav_order: 3
 has_children: true
 ---
 
-# Working with Korolev
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
-
 ### Structure
 
 ```

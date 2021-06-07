@@ -21,9 +21,6 @@ search:
   # Display the relative url in search results
   rel_url: true
 
-# Enable or disable heading anchors
-heading_anchors: true
-
 # Aux links for the upper right navigation
 aux_links:
   "Visit SEDS Celestia":

@@ -5,17 +5,6 @@ nav_order: 2
 has_children: true
 ---
 
-# General
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
-
 # Tools
 
 ## Markdown
@@ -29,3 +18,13 @@ has_children: true
 ## JS/JSON
 [JS Minifier](https://javascript-minifier.com) - Minify JS \
 [JSON Validator](https://jsonlint.com) - Validate JSON
+
+# Write Comments
+```js
+// PLEASE
+```
+```css
+.like-really{
+    tis: very !important;
+}
+```

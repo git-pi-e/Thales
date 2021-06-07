@@ -4,17 +4,6 @@ title: Layout & Typography
 parent: Thales
 ---
 
-# Layout Utilities
-
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
-
 ## Spacing
 
 These spacers are available to use for margins and padding with responsive utility classes. Combine these prefixes with a screen size and spacing scale to use them responsively.

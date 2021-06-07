@@ -4,17 +4,6 @@ title: Atomic CSS System
 parent: Korolev
 ---
 
-# Atomic CSS System
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
-
 # Bounding Box & Positioning
 
 ## Position
