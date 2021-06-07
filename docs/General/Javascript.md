@@ -128,3 +128,8 @@ class GoodParent extends Component{
     }
 }
 ```
+
+# Optimisations
+
+We do not define any file budgets on any page (If you're crossing 100kb of just JS, please stop doing WebD, its not for you).
+The only condition is that with the exception of with WebGL EVERY SINGLE page should have a Time to Interactive less than 1 second on [GTMetrix](https://gtmetrix.com)

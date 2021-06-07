@@ -5,7 +5,7 @@ nav_order: 3
 has_children: true
 ---
 
-### Structure
+# Structure
 
 ```
 |-- root
@@ -24,16 +24,17 @@ has_children: true
 `-- lic, readme
 ```
 
-### Starting Up
+# Starting Up
 
 After cloning the repo. In a terminal in the repo.
 You may use npm or pnpm
 
 ```bash
-$ npm install
+$ npm install pnpm
+$ pnpm i
 ```
 
-### Run
+## Run
 ```bash
 $ npm run dev
 # for the SCSS compilers (global/atomic)
