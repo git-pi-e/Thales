@@ -35,7 +35,7 @@ window.addEventListener("keyup", function (event) {
       } else {
         index++;
       }
-      window.location.href = Address[index];
+      window.location.replace(Address[index]);
       console.log(index);
 
       break;
@@ -46,24 +46,24 @@ window.addEventListener("keyup", function (event) {
       if (index > 0) {
         index--;
       }
-      window.location.href = Address[index];
+      window.location.replace(Address[index]);
       console.log(index);
 
       break;
     case event.key === "1":
-      window.location.href = Address[0];
+      window.location.replace(Address[0]);
       break;
     case event.key === "2":
-      window.location.href = Address[1];
+      window.location.replace(Address[1]);
       break;
     case event.key === "3":
-      window.location.href = Address[6];
+      window.location.replace(Address[6]);
       break;
     case event.key === "4":
-      window.location.href = Address[10];
+      window.location.replace(Address[10]);
       break;
     case event.key === "5":
-      window.location.href = Address[11];
+      window.location.replace(Address[11]);
       break;
 
     case event.key === "/":
