@@ -28,6 +28,11 @@ console.log(index);
 
 window.addEventListener("keyup", function (event) {
   event.preventDefault;
+  
+  if (event.target === document.querySelector(".search-input")) {
+    return;
+  }
+  
   switch (true) {
     case event.key === "k":
       if (index === Address.length - 1) {
