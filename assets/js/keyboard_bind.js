@@ -24,15 +24,23 @@ console.log(currentAddress);
 var index = Address.indexOf(currentAddress);
 console.log(index);
 
+function TriggerSnackBar() {
+  var snackID = document.getElementById("snackbar");
 
+  snackID.className = "show";
+
+  setTimeout(function () {
+    snackID.className = snackID.className.replace("show", "");
+  }, 3000);
+}
 
 window.addEventListener("keyup", function (event) {
   event.preventDefault;
-  
+
   if (event.target === document.querySelector(".search-input")) {
     return;
   }
-  
+
   switch (true) {
     case event.key === "k":
       if (index === Address.length - 1) {
@@ -44,6 +52,7 @@ window.addEventListener("keyup", function (event) {
       console.log(index);
 
       break;
+
     case event.key === "j":
       if (index <= 0) {
         index = 0;
@@ -55,6 +64,7 @@ window.addEventListener("keyup", function (event) {
       console.log(index);
 
       break;
+
     case event.key === "1":
       window.location.replace(Address[0]);
       break;
@@ -69,6 +79,10 @@ window.addEventListener("keyup", function (event) {
       break;
     case event.key === "5":
       window.location.replace(Address[11]);
+      break;
+
+    case event.key === "?":
+      TriggerSnackBar();
       break;
 
     case event.key === "/":
