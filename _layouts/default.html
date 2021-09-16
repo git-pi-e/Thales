@@ -17,6 +17,7 @@ layout: table_wrappers
   {% endunless %}
   <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/snackbar.css' | relative_url }}">
   {% if site.search_enabled %}
   <script type="text/javascript" src="{{ '/assets/js/lunr.min.js' | relative_url }}"></script>
   {% endif %}
@@ -117,8 +118,9 @@ layout: table_wrappers
       {% if site.search_enabled != false %}
       <div class="search">
         <div class="search-input-wrap">
-          <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}"
-            aria-label="Search {{ site.title }}" autocomplete="off">
+          <input type="text" id="search-input" class="search-input" tabindex="0"
+            placeholder="Use / to Search {{ site.title }}" aria-label="Use /   to Search {{ site.title }}"
+            autocomplete="off">
           <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon">
               <use xlink:href="#svg-search"></use>
             </svg></label>
@@ -199,6 +201,22 @@ layout: table_wrappers
           {%- endif -%}
         </footer>
 
+      </div>
+      <div class="snackbar" id="snackbar">
+        <h4>Use these Keybindings to zip around the site!</h4>
+
+        <ul id="hotkey_list">
+          <li><code>?</code> - Open Hotkeys Info</li>
+          <hr>
+          <li>❶ - Home</li>
+          <li>❷ - General</li>
+          <li>❸ - Korolev</li>
+          <li>❹ - Edu</li>
+          <li>❺ - Thales</li>
+          <hr>
+          <li>🅹 - Prev. Page in List</li>
+          <li>🅺 - Next Page in Index</li>
+        </ul>
       </div>
     </div>
 
